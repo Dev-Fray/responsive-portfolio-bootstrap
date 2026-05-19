@@ -4748,7 +4748,7 @@ textarea.form-control-lg {
   --bs-badge-padding-y: 0.35em;
   --bs-badge-font-size: 0.75em;
   --bs-badge-font-weight: 700;
-  --bs-badge-color: #fff;
+  --bs-badge-color: #0f172a;
   --bs-badge-border-radius: var(--bs-border-radius);
   display: inline-block;
   padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
@@ -12513,35 +12513,35 @@ textarea.form-control-lg {
 }
 
 .protanopia {
-  filter: url("../filters.svg#protanopia");
+  filter: url("../svg/filters.svg#protanopia");
 }
 
 .protanomaly {
-  filter: url("../filters.svg#protanomaly");
+  filter: url("../svg/filters.svg#protanomaly");
 }
 
 .deuteranopia {
-  filter: url("../filters.svg#deuteranopia");
+  filter: url("../svg/filters.svg#deuteranopia");
 }
 
 .deuteranomaly {
-  filter: url("../filters.svg#deuteranomaly");
+  filter: url("../svg/filters.svg#deuteranomaly");
 }
 
 .tritanopia {
-  filter: url("../filters.svg#tritanopia");
+  filter: url("../svg/filters.svg#tritanopia");
 }
 
 .tritanomaly {
-  filter: url("../filters.svg#tritanomaly");
+  filter: url("../svg/filters.svg#tritanomaly");
 }
 
 .achromatopsia {
-  filter: url("../filters.svg#achromatopsia");
+  filter: url("../svg/filters.svg#achromatopsia");
 }
 
 .achromatomaly {
-  filter: url("../filters.svg#achromatomaly");
+  filter: url("../svg/filters.svg#achromatomaly");
 }
 
 .test-grayscale {
