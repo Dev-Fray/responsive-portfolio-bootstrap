@@ -24,7 +24,6 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     ></script>
 
-    <!-- Carica la libreria EmailJS -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
@@ -85,10 +84,8 @@
       }
     </style>
 
-    <!-- Meta Theme Color -->
     <meta name="theme-color" content="#111318" />
 
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico" />
     <link
       rel="icon"
@@ -103,17 +100,14 @@
       href="./assets/favicon/favicon-16x16.png"
     />
 
-    <!-- Apple Touch Icon -->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="./assets/favicon/apple-touch-icon.png"
     />
 
-    <!-- Android/Chrome Manifest -->
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
@@ -132,7 +126,6 @@
       content="https://raimondomorosini.github.io/responsive-portfolio-bootstrap/assets/img/og-image.png"
     />
 
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta
       property="twitter:url"
@@ -151,7 +144,8 @@
       content="https://raimondomorosini.github.io/responsive-portfolio-bootstrap/assets/img/og-image.png"
     />
 
-    <!-- Structured Data (JSON-LD) -->
+    <meta name="google-site-verification" content="jqnumigBTqJ3IXRle-d_pkZ7Vtcr_v7Mt3KGMdzn3Pk" />
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -172,11 +166,7 @@
       }
     </script>
   </head>
-  <body
-    data-bs-spy="scroll"
-    data-bs-target="#sectionNav"
-    data-bs-offset="120"
-  >
+  <body data-bs-spy="scroll" data-bs-target="#sectionNav" data-bs-offset="120">
     <a
       href="#main-content"
       class="visually-hidden-focusable py-2 text-center bg-primary text-white position-absolute w-100"
@@ -232,7 +222,10 @@
     </header>
     <div class="container-fluid">
       <div class="row align-items-stretch">
-        <aside class="l-sidebar col-12 col-lg-3" aria-label="Navigazione secondaria">
+        <aside
+          class="l-sidebar col-12 col-lg-3"
+          aria-label="Navigazione secondaria"
+        >
           <div class="l-sidebar__inner">
             <nav aria-label="Percorso di navigazione">
               <ol class="breadcrumb m-0 small">
@@ -259,40 +252,47 @@
                 aria-labelledby="sidebar-nav-title"
               >
                 <a class="nav-link d-flex align-items-center px-3" href="#hero">
-                  <i class="bi bi-house-door me-2" aria-hidden="true"></i> Benvenuto
+                  <i class="bi bi-house-door me-2" aria-hidden="true"></i>
+                  Benvenuto
                 </a>
                 <a
                   class="nav-link d-flex align-items-center px-3"
                   href="#chi-sono"
                 >
-                  <i class="bi bi-person-badge me-2" aria-hidden="true"></i> Profilo & Visione
+                  <i class="bi bi-person-badge me-2" aria-hidden="true"></i>
+                  Profilo & Visione
                 </a>
                 <a
                   class="nav-link d-flex align-items-center px-3"
                   href="#projects"
                 >
-                  <i class="bi bi-terminal me-2" aria-hidden="true"></i> Portfolio Progetti
+                  <i class="bi bi-terminal me-2" aria-hidden="true"></i>
+                  Portfolio Progetti
                 </a>
                 <a
                   class="nav-link d-flex align-items-center px-3"
                   href="contatti/"
                 >
-                  <i class="bi bi-envelope me-2" aria-hidden="true"></i> Contatti
+                  <i class="bi bi-envelope me-2" aria-hidden="true"></i>
+                  Contatti
                 </a>
               </nav>
             </div>
           </div>
         </aside>
 
-        <main id="main-content" class="l-main-content col-12 col-lg-9" tabindex="-1">
+        <main
+          id="main-content"
+          class="l-main-content col-12 col-lg-9"
+          tabindex="-1"
+        >
           <section id="hero" class="c-hero" aria-labelledby="hero-title">
             <div class="c-hero__content">
               <header class="c-hero__header">
                 <span class="c-hero__badge">Ciao, sono Raimondo</span>
                 <h1 id="hero-title" class="c-hero__title">
                   Junior Software Developer
-                  <span class="c-hero__title-divider" aria-hidden="true"></span
-                  >
+                  <span class="c-hero__title-divider" aria-hidden="true"></span>
                   <span class="c-hero__title-focus"
                     >Appassionato di Clean Code & Design Patterns</span
                   >
@@ -426,8 +426,8 @@
                     <div class="c-feature-card__body">
                       <div class="c-feature-card__highlight">
                         <h4 class="c-feature-card__sub-title">
-                          <i class="bi bi-cpu-fill" aria-hidden="true"></i> Consulenza Tecnica:
-                          Ottimizzazione Algoritmica
+                          <i class="bi bi-cpu-fill" aria-hidden="true"></i>
+                          Consulenza Tecnica: Ottimizzazione Algoritmica
                         </h4>
                         <p class="c-feature-card__text--small">
                           Collaborazione attiva con un ingegnere nucleare per il
@@ -459,7 +459,10 @@
                           <li
                             class="c-feature-card__item c-feature-card__item--muted"
                           >
-                            <i class="bi bi-plus-circle-dotted" aria-hidden="true"></i>
+                            <i
+                              class="bi bi-plus-circle-dotted"
+                              aria-hidden="true"
+                            ></i>
                             <span
                               >...ed innumerevoli altri progetti sperimentali in
                               corso.</span
@@ -473,12 +476,18 @@
               </div>
             </div>
           </section>
-          <section id="projects" class="c-projects" aria-labelledby="projects-heading">
+          <section
+            id="projects"
+            class="c-projects"
+            aria-labelledby="projects-heading"
+          >
             <div class="container">
               <div class="c-projects__header mb-5">
                 <div class="c-projects__header-text">
                   <span class="c-projects__badge">Il mio lavoro</span>
-                  <h2 id="projects-heading" class="c-projects__title">Progetti</h2>
+                  <h2 id="projects-heading" class="c-projects__title">
+                    Progetti
+                  </h2>
                   <p class="c-projects__subtitle">
                     Ogni progetto rappresenta una sfida tecnica affrontata con
                     metodo e curiosità.
@@ -518,8 +527,15 @@
                         href="progetti/c-library/"
                         class="c-project-card__link"
                       >
-                        Vedi progetto <span class="visually-hidden">Sviluppo Low-Level e Strutture Dati</span>
-                        <span class="c-project-card__link-arrow" aria-hidden="true">→</span>
+                        Vedi progetto
+                        <span class="visually-hidden"
+                          >Sviluppo Low-Level e Strutture Dati</span
+                        >
+                        <span
+                          class="c-project-card__link-arrow"
+                          aria-hidden="true"
+                          >→</span
+                        >
                       </a>
                     </div>
                   </article>
@@ -556,8 +572,15 @@
                         href="progetti/spring-api/"
                         class="c-project-card__link"
                       >
-                        Vedi progetto <span class="visually-hidden">Architetture Backend e API</span>
-                        <span class="c-project-card__link-arrow" aria-hidden="true">→</span>
+                        Vedi progetto
+                        <span class="visually-hidden"
+                          >Architetture Backend e API</span
+                        >
+                        <span
+                          class="c-project-card__link-arrow"
+                          aria-hidden="true"
+                          >→</span
+                        >
                       </a>
                     </div>
                   </article>
@@ -594,8 +617,15 @@
                         href="progetti/vue-frontend/"
                         class="c-project-card__link"
                       >
-                        Vedi progetto <span class="visually-hidden">Frontend e Integrazione</span>
-                        <span class="c-project-card__link-arrow" aria-hidden="true">→</span>
+                        Vedi progetto
+                        <span class="visually-hidden"
+                          >Frontend e Integrazione</span
+                        >
+                        <span
+                          class="c-project-card__link-arrow"
+                          aria-hidden="true"
+                          >→</span
+                        >
                       </a>
                     </div>
                   </article>
@@ -613,7 +643,11 @@
             </div>
           </section>
 
-          <section id="contact" class="c-contact" aria-labelledby="contact-heading">
+          <section
+            id="contact"
+            class="c-contact"
+            aria-labelledby="contact-heading"
+          >
             <div class="container">
               <div class="row g-5 align-items-stretch">
                 <div class="col-12 col-lg-5">
@@ -640,7 +674,10 @@
                         <div class="c-contact__channels">
                           <div class="c-contact__node">
                             <div class="c-contact__node-icon">
-                              <i class="bi bi-envelope-at" aria-hidden="true"></i>
+                              <i
+                                class="bi bi-envelope-at"
+                                aria-hidden="true"
+                              ></i>
                             </div>
                             <div class="c-contact__node-body">
                               <span class="c-contact__node-label"
@@ -686,7 +723,9 @@
                       onsubmit="sendEmail(event, this)"
                     >
                       <div class="c-contact__group mb-4">
-                        <label class="c-contact__label" for="contact_name">[ identità ]</label>
+                        <label class="c-contact__label" for="contact_name"
+                          >[ identità ]</label
+                        >
                         <input
                           id="contact_name"
                           name="from_name"
@@ -699,7 +738,9 @@
                       </div>
 
                       <div class="c-contact__group mb-4">
-                        <label class="c-contact__label" for="contact_email">[ contatto ]</label>
+                        <label class="c-contact__label" for="contact_email"
+                          >[ contatto ]</label
+                        >
                         <input
                           id="contact_email"
                           name="email"
@@ -712,7 +753,9 @@
                       </div>
 
                       <div class="c-contact__group mb-4">
-                        <label class="c-contact__label" for="contact_message">[ messaggio ]</label>
+                        <label class="c-contact__label" for="contact_message"
+                          >[ messaggio ]</label
+                        >
                         <textarea
                           id="contact_message"
                           name="message"
@@ -730,7 +773,10 @@
                         Invia Messaggio
                       </button>
 
-                      <div aria-live="polite" class="visually-hidden form-status-message"></div>
+                      <div
+                        aria-live="polite"
+                        class="visually-hidden form-status-message"
+                      ></div>
                     </form>
                   </div>
                 </div>
@@ -771,7 +817,8 @@
         emailjs.sendForm(serviceID, templateID, formElement).then(
           () => {
             btn.innerText = "Messaggio Inviato!";
-            if (statusMsg) statusMsg.innerText = "Messaggio inviato con successo!";
+            if (statusMsg)
+              statusMsg.innerText = "Messaggio inviato con successo!";
             formElement.reset();
 
             setTimeout(() => {
@@ -783,7 +830,9 @@
           (err) => {
             btn.innerText = "Errore";
             btn.disabled = false;
-            if (statusMsg) statusMsg.innerText = "Impossibile inviare il messaggio in questo momento. Riprova più tardi o usa i contatti social.";
+            if (statusMsg)
+              statusMsg.innerText =
+                "Impossibile inviare il messaggio in questo momento. Riprova più tardi o usa i contatti social.";
             console.error("Errore nell'invio dell'email:", err);
           },
         );
