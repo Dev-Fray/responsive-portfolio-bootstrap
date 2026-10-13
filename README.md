@@ -3,10 +3,11 @@
 Questo repository ospita il codice sorgente del mio sito portfolio. Il progetto è stato sviluppato con l'obiettivo di creare una piattaforma leggera, manutenibile e accessibile.
 
 ## Stack Tecnologico
-* **HTML5** strutturale.
-* **Bootstrap 5**: utilizzato per il sistema di grid e la componentistica di base.
-* **SASS**: impiegato per la gestione modulare degli stili, l'uso di variabili e la personalizzazione dei componenti di Bootstrap.
-* **JavaScript (Vanilla)**: per le interazioni dinamiche essenziali.
+* **HTML5 Semantico**: per una struttura accessibile, navigabile da screen reader e chiara.
+* **Bootstrap 5.3**: utilizzato per il sistema di grid a 12 colonne, utility e componentistica di base, personalizzato direttamente dai sorgenti SCSS.
+* **SASS / SCSS**: architettura modulare (convenzione BEM con prefissi `c-` e `l-`), gestione dei token di design e override preventivo delle variabili prima della compilazione del framework.
+* **Formspree**: integrazione nativa tramite form `method="POST"` per l'invio dei messaggi, eliminando la necessità di script lato client.
+* **Zero JavaScript Custom**: piena conformità al vincolo del corso ("Solo HTML e CSS"); l'unico script caricato è il bundle ufficiale di Bootstrap per il supporto al toggle della navbar su mobile e allo ScrollSpy.
 
 ## Metodologia e Standard
 Il progetto segue criteri rigorosi di sviluppo web:
