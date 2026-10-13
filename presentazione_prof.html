@@ -112,7 +112,8 @@
 @import "components/hero";
 @import "components/about";
 @import "components/projects";
-@import "components/contact";</code></pre>
+@import "components/contact";
+@import "components/cv";</code></pre>
   <p>Sapevo anche che un unico foglio di stile lungo sarebbe diventato ingestibile, quindi ho diviso gli stili in piccoli file per componenti e layout e ho scelto la convenzione BEM con due prefissi: <code>c-</code> per i componenti e <code>l-</code> per il layout. Inoltre, per mantenere l'HTML leggibile e pulito, ho incapsulato le logiche di allineamento e flexbox direttamente nei file SCSS, riducendo al minimo l'uso di classi di utilità nel markup.</p>
   <pre><code>&lt;article class="c-project-card"&gt;
   &lt;div class="c-project-card__body"&gt;
@@ -175,12 +176,13 @@
   <div class="meta"><span class="chip">Tocco personale · Accessibilità</span><span class="num">05 / 12</span></div>
   <h2>Il Laboratorio: guardare con i propri occhi</h2>
   <p>Il Laboratorio è nato come un unico posto dove riunire tutti gli elementi grafici del sito. Il motivo è pratico: avevo bisogno di calibrare insieme colori, dimensioni e contrasti per rispettare i parametri WCAG, e di vedere stati dinamici come hover e focus, che gli strumenti automatici non sempre catturano e che io, con le conoscenze di adesso, non sapevo come verificare se non guardandoli direttamente.</p>
-  <p>Il primo caso è stato proprio il <em class="key">focus</em>. Il mio primo tentativo era un semplice cambio di colore e, provandolo, mi sono accorto che spesso non si distingueva: chi naviga da tastiera si sarebbe perso nella pagina. In <code>laboratorio/index.html</code> (nel menu si chiama "Componenti") ho riunito bottoni, card, link e testi e li ho provati fianco a fianco, anche in Dark Mode e con simulatori SVG del daltonismo (protanopia, deuteranopia, tritanopia), per capire subito se le combinazioni scelte funzionassero davvero.</p>
-  <pre><code>/* assets/scss/base/_focus.scss */
+  <p>Il primo caso è stato proprio il <em class="key">focus</em>. Il mio primo tentativo usava il blu standard di Bootstrap, ma sul tema scuro del sito non si distingueva a sufficienza: chi naviga da tastiera avrebbe fatto fatica a orientarsi. In <code>laboratorio/index.html</code> (nel menu si chiama "Componenti") ho riunito bottoni, card, link e testi e li ho provati fianco a fianco, anche con simulatori SVG del daltonismo (protanopia, deuteranopia, tritanopia), arrivando a calibrare un giallo acceso ad alto contrasto (<code>#fde047</code>) che spicca immediatamente sullo sfondo scuro.</p>
+  <pre><code>/* assets/scss/style.scss &amp; _custom-variables.scss */
+$focus-ring-color: #fde047; // Giallo vivo per contrasto WCAG su tema scuro
+
 :focus-visible {
-  outline: 3px solid #0d6efd;
-  outline-offset: 3px;
-  transition: outline-offset 0.2s ease;
+  outline: 3px solid $focus-ring-color;
+  outline-offset: 2px;
 }</code></pre>
   <p>I valori fissati lì sono poi finiti su tutto il sito. Solo dopo ho usato WAVE e Lighthouse, come conferma e non come obiettivo. Il Laboratorio mi è costato tempo, perché in HTML statico ogni componente va ricopiato a mano (ci torno nell'ultima parte), ma è il luogo in cui ho imparato di più.</p>
 </section>
