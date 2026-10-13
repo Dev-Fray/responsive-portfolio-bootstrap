@@ -7,7 +7,7 @@ $radius-lg: 1.5rem;
 $radius-md: 0.75rem;
 
 .c-about {
-    padding: 4rem 0;
+    padding: clamp(2.5rem, 6vh, 4rem) 0;
     background-color: $section-bg;
     border-radius: $radius-lg;
     box-shadow: var(--bs-box-shadow);
@@ -15,7 +15,7 @@ $radius-md: 0.75rem;
 
     &__header {
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
     }
 
     &__badge {
@@ -33,20 +33,46 @@ $radius-md: 0.75rem;
     &__lead {
         font-size: 1.25rem;
         color: var(--bs-emphasis-color);
-        margin-bottom: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    &__profile {
+        margin-bottom: 3.5rem;
     }
 
     &__description {
         @extend %section-text;
-        text-align: left;
         margin: 0 auto;
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+            margin: 0;
+            text-align: left;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center 20%;
+        border-radius: 50%;
+        box-shadow: var(--bs-box-shadow);
+        border: 3px solid rgba(var(--bs-primary-rgb), 0.25);
+        background-color: var(--bs-tertiary-bg);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2364748b'%3E%3Cpath d='M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 55%;
     }
 }
 
 .c-feature-card {
     height: 100%;
     background-color: $card-bg;
-    border: 1px solid rgba($primary-color, 0.15);
+    border: 1px solid rgba(var(--bs-primary-rgb), 0.15);
     border-radius: $radius-lg;
     box-shadow: var(--bs-box-shadow-sm);
     overflow: hidden;
@@ -106,19 +132,26 @@ $radius-md: 0.75rem;
             color: $primary-color;
             font-size: 1.2rem;
             flex-shrink: 0;
+
+            &.c-feature-card__icon--secondary {
+                color: $text-muted;
+            }
         }
 
         &--muted {
             font-style: italic;
             color: $text-muted;
-            i { color: $text-muted; }
+
+            i {
+                color: $text-muted;
+            }
         }
     }
 
     &__highlight {
         padding: 1.5rem;
-        background-color: rgba($primary-color, 0.08);
-        border: 1px solid rgba($primary-color, 0.2);
+        background-color: rgba(var(--bs-primary-rgb), 0.08);
+        border: 1px solid rgba(var(--bs-primary-rgb), 0.2);
         border-radius: $radius-md;
     }
 
@@ -145,8 +178,8 @@ $radius-md: 0.75rem;
         font-weight: 700;
         margin-bottom: 1rem;
     }
-    
+
     &__icon--secondary {
-        color: $text-muted !important;
+        color: $text-muted;
     }
 }

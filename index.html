@@ -115,8 +115,7 @@
   <body data-bs-spy="scroll" data-bs-target="#sectionNav" data-bs-offset="120">
     <a
       href="#main-content"
-      class="visually-hidden-focusable py-2 text-center bg-primary text-white position-absolute w-100"
-      style="z-index: 10000"
+      class="c-skip-link visually-hidden-focusable"
     >
       Salta al contenuto principale
     </a>
@@ -125,7 +124,7 @@
 
     <header class="sticky-top l-header">
       <div class="container">
-        <nav class="navbar navbar-expand-lg py-2" aria-label="Menu principale">
+        <nav class="navbar navbar-expand-lg" aria-label="Menu principale">
           <a class="navbar-brand d-flex align-items-center" href="./">
             <span>_RM</span>
           </a>
@@ -143,7 +142,7 @@
           </button>
 
           <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto gap-lg-3">
+            <ul class="navbar-nav ms-auto">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="./"
                   >Home</a
@@ -185,11 +184,7 @@
             </nav>
 
             <div class="l-sidebar__section mt-4">
-              <h3
-                id="sidebar-nav-title"
-                class="small text-uppercase fw-bold text-muted mb-3"
-                style="letter-spacing: 1px"
-              >
+              <h3 id="sidebar-nav-title" class="l-sidebar__section-title">
                 Indice Pagina
               </h3>
               <nav
@@ -274,21 +269,36 @@
           >
             <div class="container">
               <header class="c-about__header">
-                <span class="c-about__badge">Profilo & Competenze</span>
+                <span class="c-about__badge">Profilo &amp; Competenze</span>
                 <h2 id="about-heading" class="c-about__title">
                   Chi Sono &amp; La Mia Visione
                 </h2>
                 <p class="c-about__lead">
                   Studente di Informatica con la passione per la progettazione del software e la qualità del codice.
                 </p>
-                <p class="c-about__description">
-                  Sono uno studente universitario che sta valutando con attenzione e curiosità il proprio percorso.
-                  La mia filosofia di programmazione mette la <strong>progettazione prima del codice</strong>:
-                  non mi fermo al semplice funzionamento di una soluzione, ma mi chiedo costantemente come strutturarla al meglio,
-                  studiando i <strong>Design Pattern</strong> e i principi di <strong>Clean Code</strong> per applicarli con rigore
-                  nei miei progetti e renderli duraturi e manutenibili.
-                </p>
               </header>
+
+              <div class="c-about__profile row align-items-center g-4 justify-content-center">
+                <div class="col-12 col-md-4 col-lg-3 text-center">
+                  <img
+                    src="assets/img/FotoProfilo.jpg"
+                    alt="Ritratto di Raimondo Morosini"
+                    class="c-about__image"
+                    loading="lazy"
+                    width="200"
+                    height="200"
+                  />
+                </div>
+                <div class="col-12 col-md-8 col-lg-9">
+                  <p class="c-about__description">
+                    Sono uno studente universitario che sta valutando con attenzione e curiosità il proprio percorso.
+                    La mia filosofia di programmazione mette la <strong>progettazione prima del codice</strong>:
+                    non mi fermo al semplice funzionamento di una soluzione, ma mi chiedo costantemente come strutturarla al meglio,
+                    studiando i <strong>Design Pattern</strong> e i principi di <strong>Clean Code</strong> per applicarli con rigore
+                    nei miei progetti e renderli duraturi e manutenibili.
+                  </p>
+                </div>
+              </div>
 
               <div class="row g-4">
                 <div class="col-12 col-lg-6">
@@ -589,9 +599,7 @@
             <div class="container">
               <div class="row g-5 align-items-stretch">
                 <div class="col-12 col-lg-5">
-                  <div
-                    class="c-contact__info h-100 d-flex flex-column justify-content-center"
-                  >
+                  <div class="c-contact__info">
                     <div class="row g-4 align-items-center">
                       <div class="col-12 col-md-6 col-lg-12">
                         <header class="c-contact__header">
@@ -599,7 +607,7 @@
                           <h2 id="contact-heading" class="c-contact__title">
                             Parliamo del tuo progetto
                           </h2>
-                          <p class="c-contact__description mb-0 mb-lg-5">
+                          <p class="c-contact__description">
                             Sono aperto a nuove collaborazioni focalizzate su
                             <strong>Clean Code</strong>,
                             <strong>Architettura Software</strong> e
@@ -652,13 +660,12 @@
                 </div>
 
                 <div class="col-12 col-lg-7">
-                  <div
-                    class="c-contact__card h-100 d-flex flex-column justify-content-center"
-                  >
+                  <div class="c-contact__card">
                     <form
                       class="c-contact__form"
                       aria-label="Modulo di contatto"
-                      onsubmit="sendEmail(event, this)"
+                      action="https://formspree.io/f/mykapdvj"
+                      method="POST"
                     >
                       <div class="c-contact__group mb-4">
                         <label class="c-contact__label" for="contact_name"
@@ -710,11 +717,6 @@
                       >
                         Invia Messaggio
                       </button>
-
-                      <div
-                        aria-live="polite"
-                        class="visually-hidden form-status-message"
-                      ></div>
                     </form>
                   </div>
                 </div>
@@ -725,60 +727,14 @@
       </div>
     </div>
 
-    <footer class="py-4 border-top border-secondary border-opacity-10 bg-body">
-      <div class="container text-center">
-        <p class="mb-0 small text-muted">
+    <footer class="l-footer">
+      <div class="container">
+        <p>
           &copy; 2024 Raimondo Morosini. Progettato con precisione e Clean Code.
         </p>
       </div>
     </footer>
 
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script>
-      (function () {
-        emailjs.init("_B--uALNA7EnfRbo_");
-      })();
 
-      function sendEmail(event, formElement) {
-        event.preventDefault();
-
-        const btn = formElement.querySelector(".c-contact__btn-submit");
-        const statusMsg = formElement.querySelector(".form-status-message");
-        const originalText = btn.innerText;
-
-        btn.innerText = "Invio...";
-        btn.disabled = true;
-        if (statusMsg) statusMsg.innerText = "Invio in corso...";
-
-        const serviceID = "service_7byrabu";
-        const templateID = "template_hyxi5aj";
-
-        emailjs.sendForm(serviceID, templateID, formElement).then(
-          () => {
-            btn.innerText = "Messaggio Inviato!";
-            if (statusMsg)
-              statusMsg.innerText = "Messaggio inviato con successo!";
-            formElement.reset();
-
-            setTimeout(() => {
-              btn.innerText = originalText;
-              btn.disabled = false;
-              if (statusMsg) statusMsg.innerText = "";
-            }, 3000);
-          },
-          (err) => {
-            btn.innerText = "Errore";
-            btn.disabled = false;
-            if (statusMsg)
-              statusMsg.innerText =
-                "Impossibile inviare il messaggio in questo momento. Riprova più tardi o usa i contatti social.";
-            console.error("Errore nell'invio dell'email:", err);
-          },
-        );
-      }
-    </script>
   </body>
 </html>

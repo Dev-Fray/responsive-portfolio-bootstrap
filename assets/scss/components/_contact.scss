@@ -4,7 +4,7 @@
 
 .c-contact {
   // --- Token Locali ---
-  $contact-py:      clamp(4rem, 12vh, 8rem);
+  $contact-py:      clamp(1.5rem, 4vh, 3rem);
   $accent:          var(--bs-primary);
   $border-color:    rgba(var(--bs-primary-rgb), 0.15);
   $label-color:     var(--bs-secondary-color);
@@ -27,7 +27,18 @@
 
   &__description {
     @extend %section-text;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   // --- Nodi Informativi ---
@@ -98,8 +109,12 @@
 
   // --- Form Card ---
   &__card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: var(--bs-body-bg);
-    padding: 2.5rem;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
     border-radius: 20px;
     border: 1px solid $border-color;
     box-shadow: var(--bs-box-shadow-lg);

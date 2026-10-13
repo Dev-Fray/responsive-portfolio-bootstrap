@@ -4,17 +4,21 @@
 // Sovrascrittura variabili Bootstrap
 // ==========================================================================
 
-
+// --------------------------------------------------------------------------
+// 0. GLOBAL OPTIONS (Dark Mode Nativa)
+// --------------------------------------------------------------------------
+$enable-dark-mode: true;
+$color-mode-type: media-query;
 // --------------------------------------------------------------------------
 // 1. COLORI BASE
 // --------------------------------------------------------------------------
 
-$green:       #16a34a;
-$green-dark:  #15803d; // Accessible contrast for white text (4.58:1)
-$blue:        #0ea5e9;
-$cyan:   #22d3ee;
-$teal:   #14b8a6;
-$red:    #dc2626;
+$green: #16a34a;
+$green-dark: #15803d;
+$blue: #0ea5e9;
+$cyan: #22d3ee;
+$teal: #14b8a6;
+$red: #dc2626;
 $orange: #ea580c;
 $yellow: #ca8a04;
 
@@ -23,43 +27,43 @@ $yellow: #ca8a04;
 // 2. COLORI TEMA
 // --------------------------------------------------------------------------
 
-$primary:   $green; 
+$primary: $green;
 $secondary: #94a3b8;
-$success:   #10b981;
-$info:      #0ea5e9;
-$warning:   $yellow;
-$danger:    #f25555;
-$light:     #1e293b;
-$dark:      #0f172a;
+$success: #10b981;
+$info: #0ea5e9;
+$warning: $yellow;
+$danger: #f25555;
+$light: #1e293b;
+$dark: #0f172a;
 
 
 
-$badge-color:               $dark;
+$badge-color: $dark;
 
 
 // --------------------------------------------------------------------------
 // 3. BODY
 // --------------------------------------------------------------------------
 
-$body-bg:                 #0f172a;
-$body-color:              #f1f5f9;
+$body-bg: #0f172a;
+$body-color: #f1f5f9;
 
-$body-emphasis-color:     #ffffff;
+$body-emphasis-color: #ffffff;
 
-$body-secondary-bg:       #1e293b;
-$body-tertiary-bg:        #162032;
+$body-secondary-bg: #1e293b;
+$body-tertiary-bg: #162032;
 
-$body-secondary-color:    rgba(#f1f5f9, .80);
-$body-tertiary-color:     rgba(#f1f5f9, .55);
+$body-secondary-color: rgba(#f1f5f9, .80);
+$body-tertiary-color: rgba(#f1f5f9, .55);
 
 
 // --------------------------------------------------------------------------
 // 4. LINK
 // --------------------------------------------------------------------------
 
-$primary-light:           #4ade80;
-$link-color:              $primary-light;
-$link-hover-color:        tint-color($primary-light, 20%);
+$primary-light: #4ade80;
+$link-color: $primary-light;
+$link-hover-color: tint-color($primary-light, 20%);
 
 
 // --------------------------------------------------------------------------
@@ -67,14 +71,14 @@ $link-hover-color:        tint-color($primary-light, 20%);
 // --------------------------------------------------------------------------
 
 $nav-pills-link-active-color: $dark;
-$nav-pills-link-active-bg:    $green;
+$nav-pills-link-active-bg: $green;
 
 
 // --------------------------------------------------------------------------
 // 5. BORDI
 // --------------------------------------------------------------------------
 
-$border-color:            #334155;
+$border-color: #334155;
 $border-color-translucent: rgba(#e2e8f0, .12);
 
 
@@ -82,47 +86,47 @@ $border-color-translucent: rgba(#e2e8f0, .12);
 // 6. DARK MODE
 // --------------------------------------------------------------------------
 
-$body-color-dark:              #e2e8f0;
-$body-bg-dark:                 #0f172a;
-$body-secondary-color-dark:    rgba(#e2e8f0, .70);
-$body-secondary-bg-dark:       #1e293b;
-$body-tertiary-color-dark:     rgba(#e2e8f0, .60);
-$body-tertiary-bg-dark:        #162032;
-$border-color-dark:            #334155;
+$body-color-dark: #e2e8f0;
+$body-bg-dark: #0f172a;
+$body-secondary-color-dark: rgba(#e2e8f0, .70);
+$body-secondary-bg-dark: #1e293b;
+$body-tertiary-color-dark: rgba(#e2e8f0, .60);
+$body-tertiary-bg-dark: #162032;
+$border-color-dark: #334155;
 $border-color-translucent-dark: rgba(#e2e8f0, .12);
 
-$primary-text-emphasis-dark:   tint-color($primary, 40%);
-$success-text-emphasis-dark:   tint-color($success, 40%);
-$info-text-emphasis-dark:      tint-color($info, 40%);
-$warning-text-emphasis-dark:   tint-color($warning, 40%);
-$danger-text-emphasis-dark:    tint-color($danger, 40%);
-$light-text-emphasis-dark:     #cbd5e1;
-$dark-text-emphasis-dark:      #94a3b8;
+$primary-text-emphasis-dark: tint-color($primary, 40%);
+$success-text-emphasis-dark: tint-color($success, 40%);
+$info-text-emphasis-dark: tint-color($info, 40%);
+$warning-text-emphasis-dark: tint-color($warning, 40%);
+$danger-text-emphasis-dark: tint-color($danger, 40%);
+$light-text-emphasis-dark: #cbd5e1;
+$dark-text-emphasis-dark: #94a3b8;
 
-$primary-bg-subtle-dark:       shade-color($primary, 80%);
-$success-bg-subtle-dark:       shade-color($success, 80%);
-$info-bg-subtle-dark:          shade-color($info, 80%);
-$warning-bg-subtle-dark:       shade-color($warning, 80%);
-$danger-bg-subtle-dark:        shade-color($danger, 80%);
-$light-bg-subtle-dark:         #1e293b;
-$dark-bg-subtle-dark:          #0f172a;
+$primary-bg-subtle-dark: shade-color($primary, 80%);
+$success-bg-subtle-dark: shade-color($success, 80%);
+$info-bg-subtle-dark: shade-color($info, 80%);
+$warning-bg-subtle-dark: shade-color($warning, 80%);
+$danger-bg-subtle-dark: shade-color($danger, 80%);
+$light-bg-subtle-dark: #1e293b;
+$dark-bg-subtle-dark: #0f172a;
 
-$primary-border-subtle-dark:   shade-color($primary, 40%);
-$success-border-subtle-dark:   shade-color($success, 40%);
-$info-border-subtle-dark:      shade-color($info, 40%);
-$warning-border-subtle-dark:   shade-color($warning, 40%);
-$danger-border-subtle-dark:    shade-color($danger, 40%);
-$light-border-subtle-dark:     #334155;
-$dark-border-subtle-dark:      #1e293b;
+$primary-border-subtle-dark: shade-color($primary, 40%);
+$success-border-subtle-dark: shade-color($success, 40%);
+$info-border-subtle-dark: shade-color($info, 40%);
+$warning-border-subtle-dark: shade-color($warning, 40%);
+$danger-border-subtle-dark: shade-color($danger, 40%);
+$light-border-subtle-dark: #334155;
+$dark-border-subtle-dark: #1e293b;
 
 // --------------------------------------------------------------------------
 // 7. FOCUS RING
 // --------------------------------------------------------------------------
-$focus-ring-width:             .25rem;
-$focus-ring-opacity:           1;
-$focus-ring-color:             #fde047;
-$focus-ring-blur:              0;
+$focus-ring-width: .25rem;
+$focus-ring-opacity: 1;
+$focus-ring-color: #fde047;
+$focus-ring-blur: 0;
 
-$input-focus-border-color:     #fde047;
-$input-focus-box-shadow:       0 0 0 $focus-ring-width $focus-ring-color;
-$btn-focus-box-shadow:         0 0 0 $focus-ring-width $focus-ring-color;
+$input-focus-border-color: #fde047;
+$input-focus-box-shadow: 0 0 0 $focus-ring-width $focus-ring-color;
+$btn-focus-box-shadow: 0 0 0 $focus-ring-width $focus-ring-color;

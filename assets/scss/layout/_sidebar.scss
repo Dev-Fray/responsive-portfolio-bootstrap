@@ -34,8 +34,23 @@ $main-bg:             var(--bs-body-bg) !default;
   // Coerenza con sidebar__inner
   width: 100%;
 
+  &-title {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--bs-secondary-color);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+  }
+
   .nav-link {
     transition: all 0.25s ease;
+
+    &.disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
     
     &:hover:not(.active),
     &:focus-visible:not(.active) {

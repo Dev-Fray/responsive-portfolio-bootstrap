@@ -5,8 +5,19 @@
 .l-header {
   background-color: $body-bg;
   border-bottom: 1px solid var(--bs-border-color-translucent);
-
   z-index: 1030;
+
+  .navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .navbar-nav {
+    @include media-breakpoint-up(lg) {
+      gap: 1rem;
+    }
+  }
+
   .nav-link {
     position: relative;
     color: rgba($body-color, 0.6);

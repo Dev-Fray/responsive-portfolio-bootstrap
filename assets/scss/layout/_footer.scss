@@ -1,6 +1,16 @@
 // ==========================================================================
-// FOOTER
+// LAYOUT: Footer
 // ==========================================================================
 
-footer {
+.l-footer {
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--bs-border-color-translucent);
+  background-color: var(--bs-body-bg);
+  text-align: center;
+
+  p {
+    margin-bottom: 0;
+    font-size: 0.875rem;
+    color: var(--bs-secondary-color);
+  }
 }

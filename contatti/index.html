@@ -89,15 +89,14 @@
   >
     <a
       href="#contact-content"
-      class="visually-hidden-focusable py-2 text-center bg-primary text-white position-absolute w-100"
-      style="z-index: 10000"
+      class="c-skip-link visually-hidden-focusable"
     >
       Salta al contenuto principale
     </a>
 
     <header class="sticky-top l-header">
       <div class="container">
-        <nav class="navbar navbar-expand-lg py-2" aria-label="Menu principale">
+        <nav class="navbar navbar-expand-lg" aria-label="Menu principale">
           <a class="navbar-brand d-flex align-items-center" href="../">
             <span>_RM</span>
           </a>
@@ -115,7 +114,7 @@
           </button>
 
           <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto gap-lg-3">
+            <ul class="navbar-nav ms-auto">
               <li class="nav-item">
                 <a class="nav-link" href="../">Home</a>
               </li>
@@ -160,11 +159,7 @@
             </nav>
 
             <div class="l-sidebar__section mt-4">
-              <h3
-                id="sidebar-nav-title"
-                class="small text-uppercase fw-bold text-muted mb-3"
-                style="letter-spacing: 1px"
-              >
+              <h3 id="sidebar-nav-title" class="l-sidebar__section-title">
                 Opzioni Contatto
               </h3>
               <nav
@@ -193,7 +188,7 @@
 
         <main id="contact-content" class="l-main-content col-12 col-lg-9" tabindex="-1">
           <section
-            class="c-contact py-5"
+            class="c-contact"
             aria-labelledby="contact-page-heading"
           >
             <div class="container">
@@ -216,7 +211,8 @@
                       id="contact-form"
                       class="c-contact__form"
                       aria-label="Modulo di contatto"
-                      onsubmit="sendEmail(event, this)"
+                      action="https://formspree.io/f/mykapdvj"
+                      method="POST"
                     >
                       <div class="c-contact__group mb-4">
                         <label class="c-contact__label" for="contact_name"
@@ -264,15 +260,10 @@
 
                       <button
                         type="submit"
-                        class="btn btn-primary c-contact__btn-submit w-100"
+                        class="btn btn-primary c-contact__btn-submit"
                       >
                         Invia Messaggio
                       </button>
-
-                      <div
-                        aria-live="polite"
-                        class="visually-hidden form-status-message mt-3"
-                      ></div>
                     </form>
                   </div>
                 </div>
@@ -341,65 +332,12 @@
       </div>
     </div>
 
-    <footer class="py-4 border-top border-secondary border-opacity-10 bg-body">
-      <div class="container text-center">
-        <p class="mb-0 small text-muted">
+    <footer class="l-footer">
+      <div class="container">
+        <p>
           &copy; 2024 Raimondo Morosini. Progettato con precisione e Clean Code.
         </p>
       </div>
     </footer>
-
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script>
-      (function () {
-        emailjs.init("_B--uALNA7EnfRbo_");
-      })();
-
-      function sendEmail(event, formElement) {
-        event.preventDefault();
-
-        const btn = formElement.querySelector(".c-contact__btn-submit");
-        const statusMsg = formElement.querySelector(".form-status-message");
-        const originalText = btn.innerText;
-
-        btn.innerText = "Invio...";
-        btn.disabled = true;
-        if (statusMsg) {
-          statusMsg.innerText = "Invio in corso...";
-          statusMsg.classList.remove("visually-hidden");
-        }
-
-        const serviceID = "service_7byrabu";
-        const templateID = "template_hyxi5aj";
-
-        emailjs.sendForm(serviceID, templateID, formElement).then(
-          () => {
-            btn.innerText = "Messaggio Inviato!";
-            if (statusMsg) statusMsg.innerText = "Messaggio inviato con successo!";
-            formElement.reset();
-
-            setTimeout(() => {
-              btn.innerText = originalText;
-              btn.disabled = false;
-              if (statusMsg) {
-                statusMsg.innerText = "";
-                statusMsg.classList.add("visually-hidden");
-              }
-            }, 3000);
-          },
-          (err) => {
-            btn.innerText = "Errore";
-            btn.disabled = false;
-            if (statusMsg)
-              statusMsg.innerText =
-                "Impossibile inviare il messaggio in questo momento. Riprova più tardi.";
-            console.error("Errore nell'invio dell'email:", err);
-          },
-        );
-      }
-    </script>
   </body>
 </html>

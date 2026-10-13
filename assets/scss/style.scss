@@ -16,6 +16,7 @@
 @import "layout/header";
 @import "layout/sidebar";
 @import "layout/main";
+@import "layout/footer";
 
 @import "shared";
 
@@ -26,11 +27,26 @@
 @import "accessibility-lab";
 
 // ==========================================================================
-// ACCESSIBILITY OVERRIDES
+// SKIP LINK (COMPONENT & ACCESSIBILITY)
 // ==========================================================================
-.visually-hidden-focusable.bg-primary {
-  // Use darker green for skip link to meet 4.5:1 contrast ratio
+.c-skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  text-align: center;
   background-color: $green-dark !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 10000;
+
+  &:focus-visible {
+    top: 0;
+    outline: 3px solid $focus-ring-color !important;
+    outline-offset: 2px !important;
+  }
 }
 
 

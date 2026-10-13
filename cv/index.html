@@ -86,15 +86,14 @@
   <body data-bs-spy="scroll" data-bs-target="#sectionNav" data-bs-offset="120">
     <a
       href="#main-content"
-      class="visually-hidden-focusable py-2 text-center bg-primary text-white position-absolute w-100"
-      style="z-index: 10000"
+      class="c-skip-link visually-hidden-focusable"
     >
       Salta al contenuto principale
     </a>
 
     <header class="sticky-top l-header">
       <div class="container">
-        <nav class="navbar navbar-expand-lg py-2" aria-label="Menu principale">
+        <nav class="navbar navbar-expand-lg" aria-label="Menu principale">
           <a class="navbar-brand d-flex align-items-center" href="../">
             <span>_RM</span>
           </a>
@@ -112,7 +111,7 @@
           </button>
 
           <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto gap-lg-3">
+            <ul class="navbar-nav ms-auto">
               <li class="nav-item">
                 <a class="nav-link" href="../">Home</a>
               </li>
@@ -155,11 +154,7 @@
             </nav>
 
             <div class="l-sidebar__section mt-4">
-              <h3
-                id="sidebar-nav-title"
-                class="small text-uppercase fw-bold text-muted mb-3"
-                style="letter-spacing: 1px"
-              >
+              <h3 id="sidebar-nav-title" class="l-sidebar__section-title">
                 Indice Pagina
               </h3>
               <nav
@@ -722,9 +717,9 @@
         </main>
       </div>
     </div>
-    <footer class="py-4 border-top border-secondary border-opacity-10 bg-body">
-      <div class="container text-center">
-        <p class="mb-0 small text-muted">
+    <footer class="l-footer">
+      <div class="container">
+        <p>
           &copy; 2024 Raimondo Morosini. Progettato con precisione e Clean Code.
         </p>
       </div>
