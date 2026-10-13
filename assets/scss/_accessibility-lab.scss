@@ -63,3 +63,28 @@ $cb-types: (
   margin-bottom: 3rem;
   border-radius: 12px;
 }
+
+// ==========================================================================
+// DEV TEST BANNER
+// ==========================================================================
+.devTest {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--bs-font-monospace);
+  font-size: 12px;
+  background: #111;
+  color: #0f0;
+  padding: 4px 10px;
+  border-radius: 6px;
+  z-index: 9999;
+
+  @each $bp, $value in $grid-breakpoints {
+    @include media-breakpoint-up($bp) {
+      &::before {
+        content: "#{$bp} (≥#{$value})";
+      }
+    }
+  }
+}

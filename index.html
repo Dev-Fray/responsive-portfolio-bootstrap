@@ -28,55 +28,7 @@
 
 
 
-    <style>
-      .devTest {
-        position: fixed;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-family: monospace;
-        font-size: 12px;
-        background: #111;
-        color: #0f0;
-        padding: 4px 10px;
-        border-radius: 6px;
-        z-index: 9999;
-      }
 
-      .devTest::before {
-        content: "XS (<576px)";
-      }
-
-      @media (min-width: 576px) {
-        .devTest::before {
-          content: "SM (≥576px)";
-        }
-      }
-
-      @media (min-width: 768px) {
-        .devTest::before {
-          content: "MD (≥768px)";
-        }
-      }
-
-      @media (min-width: 992px) {
-        .devTest::before {
-          content: "LG (≥992px)";
-        }
-      }
-
-      @media (min-width: 1200px) {
-        .devTest::before {
-          content: "XL (≥1200px)";
-        }
-      }
-
-      @media (min-width: 1400px) {
-        .devTest::before {
-          content: "XXL (≥1400px)";
-        }
-      }
-    </style>
 
     <meta name="theme-color" content="#111318" />
 
