@@ -12295,7 +12295,7 @@ textarea.form-control-lg {
   --bs-btn-border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.c-projects__footer .c-projects__cta-main:hover {
+.c-projects__footer .c-projects__cta-main:hover, .c-projects__footer .c-projects__cta-main:focus-visible {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(22, 163, 74, 0.25);
 }

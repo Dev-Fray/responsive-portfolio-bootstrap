@@ -2,10 +2,10 @@
 // COMPONENT: Projects Section 
 // ==========================================================================
 // --- Token Locali ---
-$section-py:      clamp(1.5rem, 4vh, 3rem);
-$accent-c:        #A8B2C8;
-$accent-java:     $primary;
-$accent-vue:      #42b883;
+$section-py: clamp(1.5rem, 4vh, 3rem);
+$accent-c: #A8B2C8;
+$accent-java: $primary;
+$accent-vue: #42b883;
 
 .c-projects {
   padding: $section-py 0;
@@ -83,7 +83,8 @@ $accent-vue:      #42b883;
       --bs-btn-border-radius: 10px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-      &:hover {
+      &:hover,
+      &:focus-visible {
         transform: translateY(-3px);
         box-shadow: 0 10px 25px rgba($primary, 0.25);
       }
@@ -122,9 +123,17 @@ $accent-vue:      #42b883;
     flex-shrink: 0;
   }
 
-  &--c    .c-project-card__accent-bar { background: $accent-c; }
-  &--java .c-project-card__accent-bar { background: $accent-java; }
-  &--vue  .c-project-card__accent-bar { background: $accent-vue; }
+  &--c .c-project-card__accent-bar {
+    background: $accent-c;
+  }
+
+  &--java .c-project-card__accent-bar {
+    background: $accent-java;
+  }
+
+  &--vue .c-project-card__accent-bar {
+    background: $accent-vue;
+  }
 
   // --- Numero decorativo di sfondo ---
   &__body {
@@ -155,9 +164,17 @@ $accent-vue:      #42b883;
     }
   }
 
-  &--c    { --card-num: "01"; }
-  &--java { --card-num: "02"; }
-  &--vue  { --card-num: "03"; }
+  &--c {
+    --card-num: "01";
+  }
+
+  &--java {
+    --card-num: "02";
+  }
+
+  &--vue {
+    --card-num: "03";
+  }
 
   // --- Tag pill ---
   &__tags {
@@ -217,7 +234,9 @@ $accent-vue:      #42b883;
     transition: letter-spacing 0.2s ease;
 
     &:hover,
-    &:focus-visible { letter-spacing: 0.02rem; }
+    &:focus-visible {
+      letter-spacing: 0.02rem;
+    }
   }
 
   &__link-arrow {
