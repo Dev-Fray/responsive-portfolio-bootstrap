@@ -91,6 +91,8 @@
       Salta al contenuto principale
     </a>
 
+    <div class="devTest" aria-hidden="true"></div>
+
     <header class="sticky-top l-header">
       <div class="container">
         <nav class="navbar navbar-expand-lg" aria-label="Menu principale">
@@ -164,7 +166,17 @@
               >
                 <a
                   class="nav-link d-flex align-items-center px-3"
-                  href="#info-personali"
+                  href="#cv-header"
+                >
+                  <i
+                    class="bi bi-file-earmark-person me-2"
+                    aria-hidden="true"
+                  ></i>
+                  Panoramica
+                </a>
+                <a
+                  class="nav-link d-flex align-items-center px-3"
+                  href="#profilo"
                 >
                   <i
                     class="bi bi-person-lines-fill me-2"
@@ -188,7 +200,7 @@
                 </a>
                 <a
                   class="nav-link d-flex align-items-center px-3"
-                  href="#progetti-collaborazioni"
+                  href="#collaborazioni"
                 >
                   <i class="bi bi-gear-fill me-2" aria-hidden="true"></i>
                   Collaborazioni &amp; Progetti
@@ -210,66 +222,52 @@
           class="l-main-content col-12 col-lg-9"
           tabindex="-1"
         >
-          <section id="cv-header" class="py-5 bg-body-tertiary border-bottom">
-            <div class="container">
-              <div class="row align-items-center g-4">
-                <div class="col-12 col-md-8">
-                  <span class="badge bg-primary mb-2">Curriculum Vitae</span>
-                  <h1 id="cv-heading" class="display-4 fw-bold">
-                    Raimondo Morosini
-                  </h1>
-                  <p class="lead text-muted mb-0">
-                    Studente di Informatica | Appassionato di Software Design
-                  </p>
+          <!-- 1. Header CV -->
+          <section
+            id="cv-header"
+            class="c-cv-header"
+            aria-labelledby="cv-heading"
+          >
+            <div class="row align-items-center g-4">
+              <div class="col-12 col-md-8">
+                <span class="c-cv-header__badge">Curriculum Vitae</span>
+                <h1 id="cv-heading" class="c-cv-header__title">
+                  Raimondo Morosini
+                </h1>
+                <p class="c-cv-header__subtitle">
+                  Studente di Informatica | Appassionato di Software Design &amp;
+                  Clean Code
+                </p>
 
-                  <div class="d-flex flex-wrap gap-3 mt-3 small text-muted">
-                    <span class="d-flex align-items-center gap-1">
-                      <i
-                        class="bi bi-envelope text-primary"
-                        aria-hidden="true"
-                      ></i>
-                      <a
-                        href="mailto:morosini.raimondorg@gmail.com"
-                        class="text-reset text-decoration-none"
-                        >morosini.raimondorg@gmail.com</a
-                      >
-                    </span>
-                    <span class="d-flex align-items-center gap-1">
-                      <i
-                        class="bi bi-telephone text-primary"
-                        aria-hidden="true"
-                      ></i>
-                      <a
-                        href="tel:+393339260380"
-                        class="text-reset text-decoration-none"
-                        >+39 333 926 0380</a
-                      >
-                    </span>
-                    <span class="d-flex align-items-center gap-1">
-                      <i
-                        class="bi bi-geo-alt text-primary"
-                        aria-hidden="true"
-                      ></i>
-                      Ragusa
-                    </span>
-                    <span class="d-flex align-items-center gap-1">
-                      <i
-                        class="bi bi-github text-primary"
-                        aria-hidden="true"
-                      ></i>
-                      <a
-                        href="https://github.com/RaimondoMorosini"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-reset text-decoration-none"
-                        >GitHub</a
-                      >
-                    </span>
-                  </div>
-                </div>
-                <div
-                  class="col-12 col-md-4 text-md-end d-flex flex-wrap justify-content-md-end gap-2 align-items-center"
-                >
+                <address class="c-cv-header__contacts mb-0">
+                  <span class="c-cv-header__contacts-item">
+                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                    <a href="mailto:morosini.raimondorg@gmail.com"
+                      >morosini.raimondorg@gmail.com</a
+                    >
+                  </span>
+                  <span class="c-cv-header__contacts-item">
+                    <i class="bi bi-telephone" aria-hidden="true"></i>
+                    <a href="tel:+393339260380">+39 333 926 0380</a>
+                  </span>
+                  <span class="c-cv-header__contacts-item">
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    Ragusa
+                  </span>
+                  <span class="c-cv-header__contacts-item">
+                    <i class="bi bi-github" aria-hidden="true"></i>
+                    <a
+                      href="https://github.com/RaimondoMorosini"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >GitHub</a
+                    >
+                  </span>
+                </address>
+              </div>
+
+              <div class="col-12 col-md-4 text-md-end">
+                <div class="c-cv-header__actions">
                   <a
                     href="../assets/pdf/cv.pdf"
                     class="btn btn-outline-primary"
@@ -281,434 +279,372 @@
                     Scarica PDF
                   </a>
                   <a href="../contatti/" class="btn btn-primary">
-                    <i class="bi bi-envelope-fill me-2"></i> Scrivimi
+                    <i class="bi bi-envelope-fill me-2" aria-hidden="true"></i>
+                    Scrivimi
                   </a>
                 </div>
               </div>
             </div>
           </section>
 
-          <section id="cv-content" class="py-5">
-            <div class="container">
-              <div class="row g-5">
-                <div class="col-12 col-lg-8">
-                  <div class="mb-5" id="info-personali">
-                    <h2 class="h3 mb-4 d-flex align-items-center">
-                      <i class="bi bi-person-circle text-primary me-3"></i>
-                      Profilo
-                    </h2>
-                    <p>
-                      Sono uno studente universitario in Informatica con una
-                      forte passione per l'architettura software, i design
-                      pattern e il Clean Code. Credo che scrivere codice
-                      richieda prima una profonda riflessione sulla struttura
-                      della soluzione: il mio approccio è analitico, orientato a
-                      comprendere i problemi e a risolverli applicando pattern
-                      noti e standard industriali.
-                    </p>
-                    <p class="mb-0">
-                      Durante il mio percorso, ho sviluppato la capacità di
-                      gestire il tempo in modo autonomo, portando avanti gli
-                      studi universitari in parallelo a esperienze lavorative a
-                      contatto con il pubblico. Attualmente porto avanti piccoli
-                      progetti personali e collaborazioni per consolidare sul
-                      campo queste competenze backend e architetturali.
-                    </p>
-                  </div>
+          <!-- 2. Profilo -->
+          <section
+            id="profilo"
+            class="c-cv-section"
+            aria-labelledby="profilo-heading"
+          >
+            <h2 id="profilo-heading" class="c-cv-section__title">
+              <i class="bi bi-person-lines-fill" aria-hidden="true"></i>
+              Profilo Personale
+            </h2>
+            <p class="c-cv-section__text">
+              Sono uno studente universitario in Informatica con una forte
+              passione per l'architettura software, i design pattern e il Clean
+              Code. Credo che scrivere codice richieda prima una profonda
+              riflessione sulla struttura della soluzione: il mio approccio è
+              analitico, orientato a comprendere i problemi e a risolverli
+              applicando pattern noti e standard industriali.
+            </p>
+            <p class="c-cv-section__text">
+              Durante il mio percorso, ho sviluppato la capacità di gestire il
+              tempo in modo autonomo, portando avanti gli studi universitari in
+              parallelo a esperienze lavorative a contatto con il pubblico.
+              Attualmente porto avanti piccoli progetti personali e
+              collaborazioni per consolidare sul campo queste competenze backend
+              e architetturali.
+            </p>
+          </section>
 
-                  <div class="mb-5" id="esperienze">
-                    <h2 class="h3 mb-4 d-flex align-items-center">
-                      <i class="bi bi-briefcase text-primary me-3"></i>
-                      Esperienze Professionali
-                    </h2>
-                    <div class="timeline">
-                      <article
-                        class="mb-4 border-start border-primary border-4 ps-4"
-                      >
-                        <div
-                          class="d-flex flex-wrap justify-content-between align-items-baseline mb-1"
-                        >
-                          <h3 class="h5 mb-0">Cameriere di Sala</h3>
-                          <span
-                            class="badge bg-secondary-subtle text-secondary-emphasis"
-                            >2015 - 2026</span
-                          >
-                        </div>
-                        <p class="small text-primary fw-semibold mb-2">
-                          La Corte di Bacco &mdash; Ragusa
-                        </p>
-                        <ul class="small text-muted ps-3 mb-0">
-                          <li>
-                            Gestione del servizio al cliente in contesti
-                            dinamici, garantendo massima efficienza e cura dei
-                            dettagli.
-                          </li>
-                          <li>
-                            Coordinamento sinergico tra sala e cucina durante i
-                            momenti di massima affluenza.
-                          </li>
-                          <li>
-                            Sviluppo di spiccate capacità organizzative e
-                            gestione dello stress in ambienti ad alta intensità.
-                          </li>
-                          <li>
-                            Attività svolta in parallelo al percorso accademico,
-                            a dimostrazione di forte autonomia e gestione
-                            ottimale del tempo.
-                          </li>
-                        </ul>
-                      </article>
+          <!-- 3. Esperienze Professionali -->
+          <section
+            id="esperienze"
+            class="c-cv-section"
+            aria-labelledby="esperienze-heading"
+          >
+            <h2 id="esperienze-heading" class="c-cv-section__title">
+              <i class="bi bi-briefcase" aria-hidden="true"></i>
+              Esperienze Professionali
+            </h2>
+            <div class="c-cv-timeline">
+              <article class="c-cv-timeline__item">
+                <header class="c-cv-timeline__item-header">
+                  <h3 class="c-cv-timeline__item-title">Cameriere di Sala</h3>
+                  <span class="c-cv-timeline__item-badge">
+                    <time datetime="2015">2015</time> &mdash; <time datetime="2026">2026</time>
+                  </span>
+                </header>
+                <p class="c-cv-timeline__item-subtitle">
+                  La Corte di Bacco &mdash; Ragusa
+                </p>
+                <ul class="c-cv-timeline__item-list">
+                  <li>
+                    Gestione del servizio al cliente in contesti dinamici,
+                    garantendo massima efficienza e cura dei dettagli.
+                  </li>
+                  <li>
+                    Coordinamento sinergico tra sala e cucina durante i momenti
+                    di massima affluenza.
+                  </li>
+                  <li>
+                    Sviluppo di spiccate capacità organizzative e gestione dello
+                    stress in ambienti ad alta intensità.
+                  </li>
+                  <li>
+                    Attività svolta in parallelo al percorso accademico, a
+                    dimostrazione di forte autonomia e gestione ottimale del
+                    tempo.
+                  </li>
+                </ul>
+              </article>
 
-                      <article
-                        class="mb-0 border-start border-primary border-4 ps-4"
-                      >
-                        <div
-                          class="d-flex flex-wrap justify-content-between align-items-baseline mb-1"
-                        >
-                          <h3 class="h5 mb-0">Assistente Informatico</h3>
-                          <span
-                            class="badge bg-secondary-subtle text-secondary-emphasis"
-                            >2017 - 2018</span
-                          >
-                        </div>
-                        <p class="small text-primary fw-semibold mb-2">
-                          CAT srl &mdash; Ragusa
-                        </p>
-                        <ul class="small text-muted ps-3 mb-0">
-                          <li>
-                            Supporto operativo nelle attività informatiche di
-                            base e organizzazione metodica della documentazione
-                            tecnica.
-                          </li>
-                          <li>
-                            Affiancamento nello sviluppo di semplici programmi
-                            di utilità e progetti software interni.
-                          </li>
-                        </ul>
-                      </article>
-                    </div>
-                  </div>
+              <article class="c-cv-timeline__item">
+                <header class="c-cv-timeline__item-header">
+                  <h3 class="c-cv-timeline__item-title">
+                    Assistente Informatico
+                  </h3>
+                  <span class="c-cv-timeline__item-badge">
+                    <time datetime="2017">2017</time> &mdash; <time datetime="2018">2018</time>
+                  </span>
+                </header>
+                <p class="c-cv-timeline__item-subtitle">
+                  CAT srl &mdash; Ragusa
+                </p>
+                <ul class="c-cv-timeline__item-list">
+                  <li>
+                    Supporto operativo nelle attività informatiche di base e
+                    organizzazione metodica della documentazione tecnica.
+                  </li>
+                  <li>
+                    Affiancamento nello sviluppo di semplici programmi di
+                    utilità e progetti software interni.
+                  </li>
+                </ul>
+              </article>
+            </div>
+          </section>
 
-                  <div class="mb-5" id="formazione">
-                    <h2 class="h3 mb-4 d-flex align-items-center">
-                      <i class="bi bi-mortarboard text-primary me-3"></i>
-                      Formazione
-                    </h2>
+          <!-- 4. Formazione & Progetti Accademici -->
+          <section
+            id="formazione"
+            class="c-cv-section"
+            aria-labelledby="formazione-heading"
+          >
+            <h2 id="formazione-heading" class="c-cv-section__title">
+              <i class="bi bi-mortarboard" aria-hidden="true"></i>
+              Formazione &amp; Percorso Accademico
+            </h2>
+            <div class="c-cv-timeline mb-5">
+              <article class="c-cv-timeline__item">
+                <header class="c-cv-timeline__item-header">
+                  <h3 class="c-cv-timeline__item-title">
+                    Laurea Triennale in Informatica (In corso)
+                  </h3>
+                  <span class="c-cv-timeline__item-badge">
+                    <time datetime="2021">2021</time> &mdash; Presente
+                  </span>
+                </header>
+                <p class="c-cv-timeline__item-subtitle">
+                  Università degli Studi di Napoli Federico II
+                </p>
+                <p class="c-cv-section__text">
+                  Focus accademico approfondito su: Algoritmi e Strutture Dati,
+                  Sistemi Operativi, Architettura degli Elaboratori e Ingegneria
+                  del Software. Sviluppo di una solida base logico-matematica
+                  applicata alla risoluzione di problemi complessi.
+                </p>
+              </article>
 
-                    <div class="timeline mb-5">
-                      <article
-                        class="mb-4 border-start border-primary border-4 ps-4"
-                      >
-                        <div
-                          class="d-flex flex-wrap justify-content-between align-items-baseline mb-1"
-                        >
-                          <h3 class="h5 mb-0">
-                            Laurea Triennale in Informatica (In corso)
-                          </h3>
-                          <span
-                            class="badge bg-primary-subtle text-primary-emphasis"
-                            >2021 - Presente</span
-                          >
-                        </div>
-                        <p class="small text-primary fw-semibold mb-2">
-                          Università degli Studi di Napoli Federico II
-                        </p>
-                        <p class="small text-muted mb-0">
-                          Focus accademico approfondito su: Algoritmi e
-                          Strutture Dati, Sistemi Operativi, Architettura degli
-                          Elaboratori e Ingegneria del Software. Sviluppo di una
-                          solida base logico-matematica applicata alla
-                          risoluzione di problemi complessi.
-                        </p>
-                      </article>
+              <article class="c-cv-timeline__item">
+                <header class="c-cv-timeline__item-header">
+                  <h3 class="c-cv-timeline__item-title">
+                    Diploma di Maturità Tecnica in Informatica e
+                    Telecomunicazioni
+                  </h3>
+                  <span class="c-cv-timeline__item-badge">
+                    <time datetime="2014">2014</time> &mdash; <time datetime="2019">2019</time>
+                  </span>
+                </header>
+                <p class="c-cv-timeline__item-subtitle">
+                  ITIS Ettore Maiorana &mdash; Ragusa
+                </p>
+                <p class="c-cv-section__text">
+                  Votazione: 80/100. Fondamenti di programmazione, reti di
+                  calcolatori e sistemi operativi.
+                </p>
+              </article>
+            </div>
 
-                      <article
-                        class="mb-0 border-start border-primary border-4 ps-4"
-                      >
-                        <div
-                          class="d-flex flex-wrap justify-content-between align-items-baseline mb-1"
-                        >
-                          <h3 class="h5 mb-0">
-                            Diploma di Maturità Tecnica in Informatica e
-                            Telecomunicazioni
-                          </h3>
-                          <span
-                            class="badge bg-secondary-subtle text-secondary-emphasis"
-                            >2014 - 2019</span
-                          >
-                        </div>
-                        <p class="small text-primary fw-semibold mb-2">
-                          ITIS Ettore Maiorana &mdash; Ragusa
-                        </p>
-                        <p class="small text-muted mb-0">
-                          Votazione: 80/100. Fondamenti di programmazione, reti
-                          di calcolatori e sistemi operativi.
-                        </p>
-                      </article>
-                    </div>
+            <h3 id="progetti-accademici" class="h4 mb-4 d-flex align-items-center">
+              <i class="bi bi-code-slash text-primary me-2" aria-hidden="true"></i>
+              Progetti Accademici Rilevanti
+            </h3>
+            <div class="row g-4">
+              <div class="col-12 col-md-6">
+                <article class="c-cv-card">
+                  <header class="c-cv-card__header">
+                    <h4 class="c-cv-card__title">REST API Backend</h4>
+                    <span class="c-cv-card__badge">Java | Spring Boot</span>
+                  </header>
+                  <p class="c-cv-card__text">
+                    Sviluppo di un'interfaccia API RESTful scalabile e
+                    strutturata, applicando pattern architetturali OOP, gestione
+                    delle eccezioni e sicurezza.
+                  </p>
+                </article>
+              </div>
 
-                    <h3
-                      class="h4 mb-4 d-flex align-items-center"
-                      id="progetti-accademici"
-                    >
-                      <i class="bi bi-code-slash text-primary me-2"></i>
-                      Progetti Accademici Rilevanti
+              <div class="col-12 col-md-6">
+                <article class="c-cv-card">
+                  <header class="c-cv-card__header">
+                    <h4 class="c-cv-card__title">Server Multiprocesso</h4>
+                    <span class="c-cv-card__badge">Linguaggio C</span>
+                  </header>
+                  <p class="c-cv-card__text">
+                    Implementazione di un server a basso livello con gestione
+                    nativa dei processi (multiprocessing), IPC (Inter-Process
+                    Communication) e sincronizzazione delle risorse.
+                  </p>
+                </article>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <article class="c-cv-card">
+                  <header class="c-cv-card__header">
+                    <h4 class="c-cv-card__title">Frontend SPA</h4>
+                    <span class="c-cv-card__badge">Vue.js</span>
+                  </header>
+                  <p class="c-cv-card__text">
+                    Sviluppo di un'applicazione a pagina singola (Single Page
+                    Application) con interfaccia reattiva e dinamica.
+                  </p>
+                </article>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <article class="c-cv-card">
+                  <header class="c-cv-card__header">
+                    <h4 class="c-cv-card__title">Applicazione Android</h4>
+                    <span class="c-cv-card__badge">Android SDK</span>
+                  </header>
+                  <p class="c-cv-card__text">
+                    Sviluppo di un'applicazione mobile nativa per la piattaforma
+                    Android, curando l'interfaccia utente ed il ciclo di vita dei
+                    componenti.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <!-- 5. Collaborazioni & Progetti Personali -->
+          <section
+            id="collaborazioni"
+            class="c-cv-section"
+            aria-labelledby="collaborazioni-heading"
+          >
+            <h2 id="collaborazioni-heading" class="c-cv-section__title">
+              <i class="bi bi-gear-fill" aria-hidden="true"></i>
+              Collaborazioni &amp; Progetti Personali
+            </h2>
+            <div class="row g-4">
+              <div class="col-12">
+                <article class="c-cv-card">
+                  <header class="c-cv-card__header">
+                    <h3 class="c-cv-card__title">
+                      Refactoring &amp; Clean Code per Simulazioni Scientifiche
                     </h3>
-                    <div class="row g-4">
-                      <div class="col-12 col-md-6">
-                        <div class="card h-100 border bg-body-tertiary">
-                          <div class="card-body p-4">
-                            <h4
-                              class="h5 card-title d-flex align-items-center justify-content-between"
-                            >
-                              <span>REST API Backend</span>
-                              <span class="badge bg-secondary font-monospace"
-                                >Java | Spring Boot</span
-                              >
-                            </h4>
-                            <p class="card-text small text-muted mt-3">
-                              Sviluppo di un'interfaccia API RESTful scalabile e
-                              strutturata, applicando pattern architetturali
-                              OOP, gestione delle eccezioni e sicurezza.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+                    <span
+                      class="c-cv-card__badge bg-success-subtle text-success-emphasis"
+                      >Collaborazione Peer</span
+                    >
+                  </header>
+                  <p class="small text-primary fw-semibold mb-2">
+                    Supporto tecnico per simulazioni fisiche Monte Carlo
+                  </p>
+                  <p class="c-cv-card__text">
+                    Collaborazione con un ingegnere nucleare per rendere più
+                    flessibile, manutenibile e pulito un software ad alta
+                    precisione legato a simulazioni Monte Carlo per il
+                    tracciamento di particelle. Applicazione sistematica dei
+                    principi SOLID e tecniche di Clean Code per facilitare
+                    modifiche future senza alterare la precisione fisica.
+                  </p>
+                </article>
+              </div>
 
-                      <div class="col-12 col-md-6">
-                        <div class="card h-100 border bg-body-tertiary">
-                          <div class="card-body p-4">
-                            <h4
-                              class="h5 card-title d-flex align-items-center justify-content-between"
-                            >
-                              <span>Server Multiprocesso</span>
-                              <span class="badge bg-secondary font-monospace"
-                                >C</span
-                              >
-                            </h4>
-                            <p class="card-text small text-muted mt-3">
-                              Implementazione di un server a basso livello con
-                              gestione nativa dei processi (multiprocessing),
-                              IPC (Inter-Process Communication) e
-                              sincronizzazione delle risorse.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+              <div class="col-12">
+                <article class="c-cv-card">
+                  <header class="c-cv-card__header">
+                    <h3 class="c-cv-card__title">
+                      Estensione per Trascrizione Fatture
+                    </h3>
+                    <span class="c-cv-card__badge">Progetto Personale</span>
+                  </header>
+                  <p class="c-cv-card__text">
+                    Sviluppo di un'estensione browser per velocizzare ed
+                    automatizzare l'estrazione e la trascrizione di dati
+                    strutturati da fatture verso fogli Excel.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </section>
 
-                      <div class="col-12 col-md-6">
-                        <div class="card h-100 border bg-body-tertiary">
-                          <div class="card-body p-4">
-                            <h4
-                              class="h5 card-title d-flex align-items-center justify-content-between"
-                            >
-                              <span>Frontend SPA</span>
-                              <span class="badge bg-secondary font-monospace"
-                                >Vue.js</span
-                              >
-                            </h4>
-                            <p class="card-text small text-muted mt-3">
-                              Sviluppo di un'applicazione a pagina singola
-                              (Single Page Application) con interfaccia reattiva
-                              e dinamica.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-12 col-md-6">
-                        <div class="card h-100 border bg-body-tertiary">
-                          <div class="card-body p-4">
-                            <h4
-                              class="h5 card-title d-flex align-items-center justify-content-between"
-                            >
-                              <span>Applicazione Android</span>
-                              <span class="badge bg-secondary font-monospace"
-                                >Android SDK</span
-                              >
-                            </h4>
-                            <p class="card-text small text-muted mt-3">
-                              Sviluppo di un'applicazione mobile nativa per la
-                              piattaforma Android, curando l'interfaccia utente
-                              ed il ciclo di vita dei componenti.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+          <!-- 6. Competenze, Metodologie & Lingue -->
+          <section
+            id="competenze"
+            class="c-cv-section"
+            aria-labelledby="competenze-heading"
+          >
+            <h2 id="competenze-heading" class="c-cv-section__title">
+              <i class="bi bi-tools" aria-hidden="true"></i>
+              Competenze, Metodologie &amp; Lingue
+            </h2>
+            <div class="row g-4">
+              <div class="col-12 col-md-6">
+                <div class="c-cv-card h-100">
+                  <div class="c-cv-skill-group">
+                    <h3 class="c-cv-skill-group__title">Linguaggi</h3>
+                    <ul class="c-cv-skill-group__badges">
+                      <li><span class="badge">Java</span></li>
+                      <li><span class="badge">C</span></li>
+                      <li><span class="badge">JavaScript (ES6+)</span></li>
+                      <li><span class="badge">HTML5 / CSS3</span></li>
+                      <li><span class="badge">Sass</span></li>
+                      <li><span class="badge">SQL</span></li>
+                    </ul>
                   </div>
 
-                  <div class="mb-5" id="progetti-collaborazioni">
-                    <h2 class="h3 mb-4 d-flex align-items-center">
-                      <i class="bi bi-gear-fill text-primary me-3"></i>
-                      Collaborazioni &amp; Progetti
-                    </h2>
+                  <div class="c-cv-skill-group">
+                    <h3 class="c-cv-skill-group__title">Framework &amp; Tools</h3>
+                    <ul class="c-cv-skill-group__badges">
+                      <li><span class="badge">Spring Boot</span></li>
+                      <li><span class="badge">Vue.js</span></li>
+                      <li><span class="badge">Android SDK</span></li>
+                      <li><span class="badge">Bootstrap</span></li>
+                      <li><span class="badge">REST API</span></li>
+                      <li><span class="badge">Git</span></li>
+                      <li><span class="badge">Linux / Bash</span></li>
+                    </ul>
+                  </div>
 
-                    <article class="p-4 bg-body-tertiary rounded-3 border mb-4">
-                      <div
-                        class="d-flex flex-wrap justify-content-between align-items-baseline mb-2"
-                      >
-                        <h3 class="h5 mb-0">
-                          Refactoring &amp; Clean Code per Simulazioni
-                          Scientifiche
-                        </h3>
-                        <span
-                          class="badge bg-success-subtle text-success-emphasis"
-                          >Collaborazione Peer</span
-                        >
-                      </div>
-                      <p class="small text-primary fw-semibold mb-2">
-                        Supporto tecnico per simulazioni fisiche Monte Carlo
-                      </p>
-                      <p class="mb-0 small text-muted">
-                        Collaborazione con un ingegnere nucleare per rendere più
-                        flessibile, manutenibile e pulito un software ad alta
-                        precisione legato a simulazioni Monte Carlo per il
-                        tracciamento di particelle. Applicazione sistematica dei
-                        principi SOLID e tecniche di Clean Code per facilitare
-                        modifiche future senza alterare la precisione fisica.
-                      </p>
-                    </article>
-
-                    <div class="row g-4">
-                      <div class="col-12">
-                        <div class="card border bg-body">
-                          <div class="card-body p-4">
-                            <h4 class="h5 card-title">
-                              Estensione per Trascrizione Fatture
-                            </h4>
-                            <p class="card-text small text-muted mb-0">
-                              Sviluppo di un'estensione browser per velocizzare
-                              ed automatizzare l'estrazione e la trascrizione di
-                              dati strutturati da fatture verso fogli Excel.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="c-cv-skill-group mb-0">
+                    <h3 class="c-cv-skill-group__title">
+                      Architettura &amp; Principi
+                    </h3>
+                    <ul class="c-cv-skill-group__badges">
+                      <li><span class="badge">Design Patterns</span></li>
+                      <li><span class="badge">SOLID Principles</span></li>
+                      <li><span class="badge">Clean Code</span></li>
+                      <li><span class="badge">Multiprocessing</span></li>
+                      <li><span class="badge">Data Structures</span></li>
+                    </ul>
                   </div>
                 </div>
+              </div>
 
-                <div class="col-12 col-lg-4">
-                  <div class="mb-5" id="competenze">
-                    <h2 class="h4 mb-4 d-flex align-items-center">
-                      <i
-                        class="bi bi-tools text-primary me-2"
-                        aria-hidden="true"
-                      ></i>
-                      Competenze &amp; Lingue
-                    </h2>
+              <div class="col-12 col-md-6">
+                <div class="c-cv-card h-100">
+                  <div class="c-cv-skill-group">
+                    <h3 class="c-cv-skill-group__title">Lingue</h3>
+                    <dl class="row mb-0 small">
+                      <dt class="col-6 fw-semibold">Italiano</dt>
+                      <dd class="col-6 text-end text-secondary mb-2">Madrelingua</dd>
+                      <dt class="col-6 fw-semibold">Inglese</dt>
+                      <dd class="col-6 text-end text-secondary mb-0">Studio / Tecnico B2</dd>
+                    </dl>
+                  </div>
 
-                    <div class="mb-4">
-                      <h3
-                        class="h6 text-uppercase small fw-bold text-muted mb-2"
-                      >
-                        Linguaggi
-                      </h3>
-                      <div class="d-flex flex-wrap gap-2">
-                        <span class="badge bg-secondary">Java</span>
-                        <span class="badge bg-secondary">C</span>
-                        <span class="badge bg-secondary"
-                          >JavaScript (ES6+)</span
+                  <div class="c-cv-skill-group mb-0">
+                    <h3 class="c-cv-skill-group__title">
+                      Attitudini &amp; Soft Skills
+                    </h3>
+                    <ul class="c-cv-skill-group__list">
+                      <li>
+                        <i class="bi bi-check2-circle" aria-hidden="true"></i>
+                        <span
+                          ><strong>Apprendimento autonomo:</strong> rapido studio
+                          di documentazione tecnica e sperimentazione diretta su
+                          progetti pratici.</span
                         >
-                        <span class="badge bg-secondary">HTML5 / CSS3</span>
-                        <span class="badge bg-secondary">Sass</span>
-                        <span class="badge bg-secondary">SQL</span>
-                      </div>
-                    </div>
-
-                    <div class="mb-4">
-                      <h3
-                        class="h6 text-uppercase small fw-bold text-muted mb-2"
-                      >
-                        Framework &amp; Tools
-                      </h3>
-                      <div class="d-flex flex-wrap gap-2">
-                        <span class="badge bg-secondary">Spring Boot</span>
-                        <span class="badge bg-secondary">Vue.js</span>
-                        <span class="badge bg-secondary">Android SDK</span>
-                        <span class="badge bg-secondary">Bootstrap</span>
-                        <span class="badge bg-secondary">REST API</span>
-                        <span class="badge bg-secondary">Git</span>
-                        <span class="badge bg-secondary">Linux / Bash</span>
-                      </div>
-                    </div>
-
-                    <div class="mb-4">
-                      <h3
-                        class="h6 text-uppercase small fw-bold text-muted mb-2"
-                      >
-                        Architettura &amp; Principi
-                      </h3>
-                      <div class="d-flex flex-wrap gap-2">
-                        <span class="badge bg-secondary">Design Patterns</span>
-                        <span class="badge bg-secondary">SOLID Principles</span>
-                        <span class="badge bg-secondary">Clean Code</span>
-                        <span class="badge bg-secondary">Multiprocessing</span>
-                        <span class="badge bg-secondary">Data Structures</span>
-                      </div>
-                    </div>
-
-                    <div class="mb-4 border-top pt-4">
-                      <h3
-                        class="h6 text-uppercase small fw-bold text-muted mb-2"
-                      >
-                        Lingue
-                      </h3>
-                      <ul class="list-unstyled small mb-0">
-                        <li class="d-flex justify-content-between mb-1">
-                          <span class="fw-semibold">Italiano</span>
-                          <span class="text-muted">Madrelingua</span>
-                        </li>
-                        <li class="d-flex justify-content-between">
-                          <span class="fw-semibold">Inglese</span>
-                          <span class="text-muted">Studio / Tecnico</span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="border-top pt-4">
-                      <h3
-                        class="h6 text-uppercase small fw-bold text-muted mb-2"
-                      >
-                        Attitudini &amp; Soft Skills
-                      </h3>
-                      <ul class="list-unstyled small mb-0">
-                        <li class="mb-2 d-flex align-items-start gap-2">
-                          <i
-                            class="bi bi-check2-circle text-primary mt-1"
-                            aria-hidden="true"
-                          ></i>
-                          <span
-                            ><strong>Apprendimento autonomo</strong> tramite
-                            progetti personali e studio autonomo di
-                            documentazione tecnica.</span
-                          >
-                        </li>
-                        <li class="mb-2 d-flex align-items-start gap-2">
-                          <i
-                            class="bi bi-check2-circle text-primary mt-1"
-                            aria-hidden="true"
-                          ></i>
-                          <span
-                            ><strong>Gestione dello stress</strong> e ottime
-                            capacità relazionali sviluppate lavorando con il
-                            pubblico.</span
-                          >
-                        </li>
-                        <li class="d-flex align-items-start gap-2">
-                          <i
-                            class="bi bi-check2-circle text-primary mt-1"
-                            aria-hidden="true"
-                          ></i>
-                          <span
-                            ><strong>Precisione</strong> e orientamento alla
-                            qualità del software e all'architettura prima della
-                            scrittura del codice.</span
-                          >
-                        </li>
-                      </ul>
-                    </div>
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle" aria-hidden="true"></i>
+                        <span
+                          ><strong>Gestione dello stress &amp; affidabilità:</strong>
+                          ottime capacità relazionali e problem-solving
+                          sviluppate nel lavoro a contatto col pubblico.</span
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-check2-circle" aria-hidden="true"></i>
+                        <span
+                          ><strong>Precisione architetturale:</strong> riflessione
+                          metodica sui requisiti e sulla struttura prima della
+                          stesura del codice.</span
+                        >
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -720,7 +656,7 @@
     <footer class="l-footer">
       <div class="container">
         <p>
-          &copy; 2024 Raimondo Morosini. Progettato con precisione e Clean Code.
+          &copy; 2026 Raimondo Morosini. Progettato con precisione e Clean Code.
         </p>
       </div>
     </footer>
