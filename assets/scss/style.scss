@@ -24,6 +24,7 @@
 @import "components/about";
 @import "components/projects";
 @import "components/contact";
+@import "components/cv";
 @import "accessibility-lab";
 
 // ==========================================================================
@@ -36,16 +37,16 @@
   width: 100%;
   padding: 0.75rem 1rem;
   text-align: center;
-  background-color: $green-dark !important;
-  color: #ffffff !important;
+  background-color: $green-dark;
+  color: #ffffff;
   font-weight: 600;
   text-decoration: none;
   z-index: 10000;
 
   &:focus-visible {
     top: 0;
-    outline: 3px solid $focus-ring-color !important;
-    outline-offset: 2px !important;
+    outline: 3px solid $focus-ring-color;
+    outline-offset: 2px;
   }
 }
 
@@ -53,10 +54,15 @@
 // ==========================================================================
 // GLOBAL FOCUS
 // ==========================================================================
-*:focus-visible {
-  outline: 3px solid $focus-ring-color !important;
-  outline-offset: 2px !important;
-  box-shadow: none !important;
+:focus-visible {
+  outline: 3px solid $focus-ring-color;
+  outline-offset: 2px;
+}
+
+.btn:focus-visible,
+.form-control:focus-visible,
+.nav-link:focus-visible {
+  box-shadow: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

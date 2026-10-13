@@ -94,6 +94,8 @@
       Salta al contenuto principale
     </a>
 
+    <div class="devTest" aria-hidden="true"></div>
+
     <header class="sticky-top l-header">
       <div class="container">
         <nav class="navbar navbar-expand-lg" aria-label="Menu principale">
@@ -268,10 +270,10 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-lg-5" id="direct-contacts">
+                <section class="col-12 col-lg-5" id="direct-contacts" aria-labelledby="direct-contacts-heading">
                   <div class="c-contact__info">
-                    <h2 class="h4 mb-4">Riferimenti Diretti</h2>
-                    <div class="c-contact__channels">
+                    <h2 id="direct-contacts-heading" class="h4 mb-4">Riferimenti Diretti</h2>
+                    <address class="c-contact__channels">
                       <div class="c-contact__node mb-4">
                         <div class="c-contact__node-icon">
                           <i class="bi bi-envelope-at" aria-hidden="true"></i>
@@ -300,7 +302,7 @@
                           >
                         </div>
                       </div>
-                    </div>
+                    </address>
 
                     <div class="mt-5 p-4 bg-body-tertiary rounded-3 border">
                       <h3 class="h5 mb-3">Perché contattarmi?</h3>
@@ -324,7 +326,7 @@
                       </ul>
                     </div>
                   </div>
-                </div>
+                </section>
               </div>
             </div>
           </section>

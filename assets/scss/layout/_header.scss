@@ -38,7 +38,6 @@
     &:hover,
     &:focus-visible {
       color: $body-color;
-      outline: none;
     }
     &.active{
       color: $primary;

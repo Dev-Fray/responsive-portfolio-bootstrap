@@ -1,10 +1,18 @@
 {
-  "liveSassCompile.settings.args": [
+  "liveSassCompile.settings.compilerArgs": [
     "--quiet-deps",
     "--silence-deprecation=import",
     "--silence-deprecation=global-builtin",
     "--silence-deprecation=color-functions",
-    "--silence-deprecation=slash-div"
+    "--silence-deprecation=slash-div",
+    "--silence-deprecation=if-function"
+  ],
+  "liveSassCompile.settings.silenceDeprecations": [
+    "import",
+    "global-builtin",
+    "color-functions",
+    "slash-div",
+    "if-function"
   ],
   "liveSassCompile.settings.excludeList": [
     "/**/bootstrap-5.3.8/**",
