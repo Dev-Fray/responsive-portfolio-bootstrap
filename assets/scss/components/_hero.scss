@@ -7,7 +7,6 @@
   $hero-py:           clamp(2rem, 6vh, 4rem);
   $hero-gap:          2.5rem;
   $title-size:        clamp(2.4rem, 6vw, 4rem);
-  $text-muted:        var(--bs-secondary-color);
   $accent:            $primary; // La tua variabile globale Bootstrap
 
   padding: $hero-py 0;

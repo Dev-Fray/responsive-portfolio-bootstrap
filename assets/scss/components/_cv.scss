@@ -5,7 +5,7 @@
 // --- Header CV ---
 .c-cv-header {
   padding: clamp(2rem, 5vh, 3.5rem) clamp(1.5rem, 3vw, 2.5rem);
-  background-color: var(--bs-body-tertiary);
+  background-color: var(--bs-tertiary-bg);
   border: 1px solid var(--bs-border-color);
   border-radius: 1.25rem;
   box-shadow: var(--bs-box-shadow-sm);
@@ -171,7 +171,7 @@
 // --- Griglia Card CV (Progetti accademici, collaborazioni, competenze) ---
 .c-cv-card {
   height: 100%;
-  background-color: var(--bs-body-tertiary);
+  background-color: var(--bs-tertiary-bg);
   border: 1px solid var(--bs-border-color);
   border-radius: 1rem;
   padding: 1.5rem;
@@ -246,7 +246,7 @@
       font-weight: 500;
       padding: 0.45em 0.8em;
       border-radius: 0.4rem;
-      background-color: var(--bs-body-tertiary);
+      background-color: var(--bs-tertiary-bg);
       border: 1px solid var(--bs-border-color);
       color: var(--bs-emphasis-color);
       transition: border-color 0.2s ease;

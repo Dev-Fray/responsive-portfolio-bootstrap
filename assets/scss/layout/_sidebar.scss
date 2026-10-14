@@ -3,11 +3,9 @@
 // ==========================================================================
 
 // Tokens locali (sovrascrivibili da fuori)
-$sidebar-width:       col(3) !default; // gestito da Bootstrap grid
 $sidebar-bg:          var(--bs-tertiary-bg) !default;
 $sidebar-border:      rgba(var(--bs-primary-rgb), 0.1) !default;
 $sidebar-top-offset:  80px !default;
-$main-bg:             var(--bs-body-bg) !default;
 
 // --------------------------------------------------------------------------
 // Aside

@@ -17,9 +17,6 @@
 }
 
 .force-focus {
-  color: var(--bs-btn-focus-color, inherit) !important;
-  background-color: var(--bs-btn-focus-bg, inherit) !important;
-  border-color: var(--bs-btn-focus-border-color, inherit) !important;
   outline: 3px solid $focus-ring-color !important;
   outline-offset: 2px !important;
   box-shadow: none !important;

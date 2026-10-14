@@ -74,20 +74,22 @@ $accent-vue: #42b883;
     }
   }
 
-  // Footer CTA
-  &__footer {
-    .c-projects__cta-main {
-      --bs-btn-padding-y: 0.8rem;
-      --bs-btn-padding-x: 2.4rem;
-      --bs-btn-font-weight: 600;
-      --bs-btn-border-radius: 10px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  // Actions CTA
+  &__actions {
+    // Contenitore per CTA della sezione
+  }
 
-      &:hover,
-      &:focus-visible {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba($primary, 0.25);
-      }
+  &__cta-main {
+    --bs-btn-padding-y: 0.8rem;
+    --bs-btn-padding-x: 2.4rem;
+    --bs-btn-font-weight: 600;
+    --bs-btn-border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba($primary, 0.25);
     }
   }
 }

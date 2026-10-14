@@ -12084,7 +12084,7 @@ textarea.form-control-lg {
 
 .c-about {
   padding: clamp(2.5rem, 6vh, 4rem) 0;
-  background-color: var(--bs-body-tertiary);
+  background-color: var(--bs-tertiary-bg);
   border-radius: 1.5rem;
   box-shadow: var(--bs-box-shadow);
 }
@@ -12137,7 +12137,7 @@ textarea.form-control-lg {
 
 .c-feature-card {
   height: 100%;
-  background-color: var(--bs-body);
+  background-color: var(--bs-body-bg);
   border: 1px solid rgba(var(--bs-primary-rgb), 0.15);
   border-radius: 1.5rem;
   box-shadow: var(--bs-box-shadow-sm);
@@ -12288,14 +12288,14 @@ textarea.form-control-lg {
   display: inline-block;
   transition: transform 0.25s ease;
 }
-.c-projects__footer .c-projects__cta-main {
+.c-projects__cta-main {
   --bs-btn-padding-y: 0.8rem;
   --bs-btn-padding-x: 2.4rem;
   --bs-btn-font-weight: 600;
   --bs-btn-border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.c-projects__footer .c-projects__cta-main:hover, .c-projects__footer .c-projects__cta-main:focus-visible {
+.c-projects__cta-main:hover, .c-projects__cta-main:focus-visible {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(22, 163, 74, 0.25);
 }
@@ -12568,7 +12568,7 @@ textarea.form-control-lg {
 
 .c-cv-header {
   padding: clamp(2rem, 5vh, 3.5rem) clamp(1.5rem, 3vw, 2.5rem);
-  background-color: var(--bs-body-tertiary);
+  background-color: var(--bs-tertiary-bg);
   border: 1px solid var(--bs-border-color);
   border-radius: 1.25rem;
   box-shadow: var(--bs-box-shadow-sm);
@@ -12706,7 +12706,7 @@ textarea.form-control-lg {
 
 .c-cv-card {
   height: 100%;
-  background-color: var(--bs-body-tertiary);
+  background-color: var(--bs-tertiary-bg);
   border: 1px solid var(--bs-border-color);
   border-radius: 1rem;
   padding: 1.5rem;
@@ -12773,7 +12773,7 @@ textarea.form-control-lg {
   font-weight: 500;
   padding: 0.45em 0.8em;
   border-radius: 0.4rem;
-  background-color: var(--bs-body-tertiary);
+  background-color: var(--bs-tertiary-bg);
   border: 1px solid var(--bs-border-color);
   color: var(--bs-emphasis-color);
   transition: border-color 0.2s ease;
@@ -12821,9 +12821,6 @@ textarea.form-control-lg {
 }
 
 .force-focus {
-  color: var(--bs-btn-focus-color, inherit) !important;
-  background-color: var(--bs-btn-focus-bg, inherit) !important;
-  border-color: var(--bs-btn-focus-border-color, inherit) !important;
   outline: 3px solid #fde047 !important;
   outline-offset: 2px !important;
   box-shadow: none !important;
